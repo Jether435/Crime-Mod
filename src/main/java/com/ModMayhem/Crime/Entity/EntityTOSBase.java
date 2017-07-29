@@ -14,6 +14,10 @@ public class EntityTOSBase extends EntityMob{
 	public boolean dayTime;
 	public EntityTOSBase(World p_i1738_1_) {
 		super(p_i1738_1_);
+		this.NonSelf.add(Arsonist.class);
+		this.NonSelf.add(Hypnotist.class);
+		//this.NonSelf.add(.class);
+		//in mob class, remove self.
 		while(this.truebool = true) {
 			x++;
 		}
@@ -25,7 +29,7 @@ public class EntityTOSBase extends EntityMob{
 			while(this.nightTime = true) {
 				y++;
 			}
-			if(this.y == 1000) {
+			if(this.y == 10000) {
 				this.dayTime = true;
 				this.truebool=true;
 				}
@@ -45,16 +49,17 @@ public class EntityTOSBase extends EntityMob{
 	public boolean isDoused;
 	public boolean isJailed;
 	public List<Object> NonSelf;
-	public boolean isArsonist;
+	public boolean knowsArsonist;
 	public String getRole() {
 		return Role;
 	}
-	public void getConditionalRole() {
+	/*
+	  public void getConditionalRole() {
 		if(this.Role.equals("Arsonist")) {
-			this.isArsonist=true;
+			this.knowsArsonist=true;
 		}
-		
-	}
+	}	
+	*/
 	public int lengthNonSelf = NonSelf.size();
 	public Object RandomNonSelfMember() {
 		EntityTOSBase e;

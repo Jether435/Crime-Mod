@@ -8,6 +8,13 @@ public class Hypnotist extends EntityTOSBase{
 		super(p_i1738_1_);
 		this.isMafia = true;
 		this.Role = "Hypnotist";
+		this.MemberList.add(this);
+		this.NonSelf.remove(this);
+		if(this.nightTime=true) {
+			EntityTOSBase e;
+			e = (EntityTOSBase) this.RandomNonSelfMember();
+			//e.
+			}
 	}
 
 }

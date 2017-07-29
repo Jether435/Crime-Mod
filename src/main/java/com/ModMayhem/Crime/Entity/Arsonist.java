@@ -15,10 +15,11 @@ public class Arsonist extends EntityTOSBase {
 		super(p_i1738_1_);
 		this.Role = "Arsonist";
 		isThirdParty = true;
+		this.NonSelf.remove(this);
 		this.MemberList.add(this);
 		if(this.nightTime = true) {
 			EntityTOSBase e;
-			e = (EntityTOSBase) this.RandomMember();
+			e = (EntityTOSBase) this.RandomNonSelfMember();
 			e.isDoused = true;
 			dousedCount++;
 		}
