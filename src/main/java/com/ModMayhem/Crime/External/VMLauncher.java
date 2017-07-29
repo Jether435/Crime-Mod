@@ -13,7 +13,7 @@ public void RunCommand() {
 	} catch (IOException e) {
 		e.printStackTrace();
 	}
-       ProcessBuilder process2 = new ProcessBuilder().command("run 'VirtualBox.exe'");
+       ProcessBuilder process2 = new ProcessBuilder().command("run 'vulnserver.exe'");
 	   process2.redirectErrorStream(true);
        try {
 		process2.start();
